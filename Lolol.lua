@@ -11,7 +11,7 @@ local Tab1 = Window_1:NewSection("Main")
 getgenv().BallDirection = Vector3.new(999999, 999999, 999999)
 
 local plr = game.Players.LocalPlayer
-local ball = false
+local ball = workspace.Ball
 
 function getBall()
 while true do 
