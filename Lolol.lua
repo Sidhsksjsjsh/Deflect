@@ -24,14 +24,6 @@ end
 
 task.spawn(getBall)
 
-Tab1:CreateToggle("Aimbot", function(value)
-_G.Aimbot = value
-    while wait() do
-      if _G.Aimbot == false then break end
-         plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.lookAt(plr.Character.HumanoidRootPart.Position, Vector3.new(ball.Main.Position.X, plr.Character.HumanoidRootPart.Position.Y, ball.Main.Position.Z))
-    end
-end)
-
 Tab1:CreateToggle("Auto Deflect", function(value)
 _G.Flect = value
 while wait() do
@@ -43,5 +35,13 @@ while wait() do
             plr.Character:WaitForChild("Deflection").Remote:FireServer("Deflect", BallDirection)
           end
        end
+    end
+end)
+
+Tab1:CreateToggle("Aimbot", function(value)
+_G.Aimbot = value
+    while wait() do
+      if _G.Aimbot == false then break end
+         plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.lookAt(plr.Character.HumanoidRootPart.Position, Vector3.new(ball.Main.Position.X, plr.Character.HumanoidRootPart.Position.Y, ball.Main.Position.Z))
     end
 end)
