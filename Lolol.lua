@@ -14,7 +14,7 @@ local plr = game.Players.LocalPlayer
 local ball = false
 
 function getBall()
-while true do 
+while wait() do 
     if workspace:FindFirstChild("Ball") ~= nil then
        ball = workspace.Ball
     end
