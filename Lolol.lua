@@ -14,7 +14,7 @@ local plr = game.Players.LocalPlayer
 local ball = false
 
 function getBall()
-while wait() do 
+while true do game:GetService("RunService").Stepped:Wait()
     if workspace:FindFirstChild("Ball") ~= nil then
        ball = workspace.Ball
     end
